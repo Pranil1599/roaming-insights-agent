@@ -38,10 +38,10 @@ TEST_CASES = {
     "SMS": [("IR.24 MO SMS", ["SMSC address not whitelisted", "SMS-C not reachable"]),
             ("IR.24 MT SMS", ["SRI-for-SM blocked by SMS firewall"])],
     "GPRS": [("IR.35 PDP Context", ["APN mismatch", "GTP-C path failure", "PS attach reject cause 14"])],
-    "LTE Data": [("IR.88 LTE Attach", ["Diameter 5004 Roaming Not Allowed", "S6a timeout", "DRA routing error",
+    "LTE Data": [("IR.38 LTE Attach", ["Diameter 5004 Roaming Not Allowed", "S6a timeout", "DRA routing error",
                                          "PS attach reject cause 14"]),
-                 ("IR.88 LTE Data Session", ["APN mismatch", "S8 GTP tunnel failure"])],
-    "VoLTE": [("IR.92 VoLTE MO Call", ["IMS APN not configured", "S8HR not supported", "P-CSCF unreachable"])],
+                 ("IR.38 LTE Data Session", ["APN mismatch", "S8 GTP tunnel failure"])],
+    "VoLTE": [("VoLTE MO Call", ["IMS APN not configured", "S8HR not supported", "P-CSCF unreachable"])],
 }
 TESTERS = ["A. Rao", "K. Mensah", "L. Silva", "P. Joshi", "M. Okafor"]
 
@@ -122,7 +122,7 @@ CREATE TABLE ireg_tests (
     test_date TEXT NOT NULL,         -- ISO date YYYY-MM-DD
     direction TEXT NOT NULL,         -- Inbound (their SIMs on our network) / Outbound (our SIMs abroad)
     service TEXT NOT NULL,           -- GSM Voice, SMS, GPRS, LTE Data, VoLTE
-    test_case TEXT NOT NULL,         -- e.g. 'IR.88 LTE Attach'
+    test_case TEXT NOT NULL,         -- e.g. 'IR.38 LTE Attach'
     result TEXT NOT NULL,            -- PASS, FAIL, BLOCKED
     failure_cause TEXT,              -- NULL when PASS
     tester TEXT NOT NULL
