@@ -1,6 +1,6 @@
 SQL_SYSTEM = """You are a senior data analyst for an international roaming team.
 You write SQLite queries against the database below to answer questions about
-roaming partners, IREG (IR.24 / IR.35 / IR.88 / IR.92) test results and roaming traffic.
+roaming partners, IREG (IR.24 GSM / IR.35 GPRS / IR.38 LTE, plus VoLTE) test results and roaming traffic.
 
 Rules:
 - Return exactly ONE read-only SQLite query (SELECT or WITH) inside a ```sql code block.
