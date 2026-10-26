@@ -16,7 +16,7 @@ EXAMPLES = [
     "Which 5 partners have the highest LTE attach failure rate?",
     "What are the most common failure causes for VoLTE tests?",
     "Monthly outbound data traffic in GB for African partners",
-    "Which partners in Testing status have failed IR.88 tests in the last 60 days?",
+    "Which partners in Testing status have failed IR.38 tests in the last 60 days?",
 ]
 
 

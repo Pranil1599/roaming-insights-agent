@@ -4,7 +4,7 @@
 
 A GenAI analytics agent built with **LangGraph**. It turns a question like *"Which partners have the highest LTE attach failure rate?"* into a SQLite query. A **human analyst approves, edits or rejects** the query before it runs. The agent then executes it read-only and explains the result.
 
-The data models a telecom roaming / IREG team: roaming partners, IREG test results (IR.24, IR.35, IR.88, IR.92) and monthly roaming traffic and revenue. **All data is synthetic** and every operator name and TADIG code is fictional.
+The data models a telecom roaming / IREG team: roaming partners, IREG test results (IR.24 GSM, IR.35 GPRS, IR.38 LTE, plus VoLTE) and monthly roaming traffic and revenue. **All data is synthetic** and every operator name and TADIG code is fictional.
 
 ---
 
@@ -91,7 +91,7 @@ python eval/run_eval.py --model openai:gpt-4o-mini
 - Which 5 partners have the highest LTE attach failure rate?
 - What are the most common failure causes for VoLTE tests?
 - Monthly outbound data traffic in GB for African partners
-- Which partners in Testing status failed IR.88 tests in the last 60 days?
+- Which partners in Testing status failed IR.38 tests in the last 60 days?
 - Revenue per hub for Q2 2026
 
 ## Data model
